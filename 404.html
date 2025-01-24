@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>404 Not Found</title>
+<style>
+.error-container {
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #f2f2f2;
+}
+
+.error-container h1 {
+font-size: 48px;
+font-weight: bold;
+color: #333;
+}
+
+.error-container p {
+font-size: 18px;
+color: #666;
+}
+
+.error-container a {
+text-decoration: none;
+color: #008000;
+}
+
+.error-container a:hover {
+color: #006400;
+}
+</style>
+</head>
+<body>
+<div class="error-container">
+<h1>404 Not Found</h1>
+<p>The page you are looking for does not exist.</p>
+<p>Please try again or contact the administrator.</p>
+<a href="/">Go back to home page</a>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const errorContainer = document.querySelector(".error-container");
+errorContainer.addEventListener("click", function () {
+window.location.href = "/"; // redirect to homepage
+});
+});
+</script>
+</body>
+</html>
