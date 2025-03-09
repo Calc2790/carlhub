@@ -14,7 +14,7 @@ a:hover, a:active,a:focus {
   font-size: 21px;
 }
 
-* {
+main {
   background: papayawhip;
 }
 
@@ -22,7 +22,7 @@ a:hover, a:active,a:focus {
  color: black;
 }
 
-* {
+main {
   text-transform: uppercase;
 }
 
