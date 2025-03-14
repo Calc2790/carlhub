@@ -1,52 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>404 Not Found</title>
-<style>
-.error-container {
-width: 100%;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #f2f2f2;
-}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>404 - Page Not Found</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
 
-.error-container h1 {
-font-size: 48px;
-font-weight: bold;
-color: #333;
-}
+		body {
+			background-color: #f8f9fa;
+			color: #212529;
+			line-height: 1.6;
+		}
 
-.error-container p {
-font-size: 18px;
-color: #666;
-}
+		.error-container {
+			width: 100%;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 2rem;
+			text-align: center;
+		}
 
-.error-container a {
-text-decoration: none;
-color: #008000;
-}
+		.error-code {
+			font-size: 120px;
+			font-weight: 700;
+			color: #0d6efd;
+			margin-bottom: 0;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+		}
 
-.error-container a:hover {
-color: #006400;
-}
-</style>
+		.error-message {
+			font-size: 28px;
+			font-weight: 600;
+			margin-bottom: 1.5rem;
+		}
+
+		.error-description {
+			font-size: 18px;
+			color: #6c757d;
+			max-width: 600px;
+			margin-bottom: 2rem;
+		}
+
+		.options-container {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			margin-bottom: 2rem;
+			width: 100%;
+			max-width: 500px;
+		}
+
+		.search-form {
+			display: flex;
+			width: 100%;
+		}
+
+		.search-input {
+			flex-grow: 1;
+			padding: 0.75rem 1rem;
+			border: 1px solid #ced4da;
+			border-radius: 4px 0 0 4px;
+			font-size: 16px;
+		}
+
+		.search-button {
+			background-color: #0d6efd;
+			color: white;
+			border: none;
+			padding: 0.75rem 1.5rem;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 0 4px 4px 0;
+			transition: background-color 0.2s;
+		}
+
+		.search-button:hover {
+			background-color: #0b5ed7;
+		}
+
+		.button-primary {
+			display: inline-block;
+			background-color: #0d6efd;
+			color: white;
+			text-decoration: none;
+			padding: 0.75rem 1.5rem;
+			border-radius: 4px;
+			font-weight: 500;
+			transition: background-color 0.2s;
+			font-size: 16px;
+			width: 100%;
+			text-align: center;
+		}
+
+		.button-primary:hover {
+			background-color: #0b5ed7;
+		}
+
+		.popular-links {
+			margin-top: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		.popular-links a {
+			color: #0d6efd;
+			text-decoration: none;
+			padding: 0.5rem 1rem;
+			border-radius: 50px;
+			background-color: rgba(13, 110, 253, 0.1);
+			transition: background-color 0.2s;
+		}
+
+		.popular-links a:hover {
+			background-color: rgba(13, 110, 253, 0.2);
+		}
+
+		.separator {
+			width: 60px;
+			height: 4px;
+			background-color: #dee2e6;
+			margin: 1.5rem 0;
+			border-radius: 2px;
+		}
+
+		.help-text {
+			font-size: 14px;
+			color: #6c757d;
+		}
+
+		.error-illustration {
+			max-width: 300px;
+			margin-bottom: 2rem;
+		}
+
+		@media (max-width: 768px) {
+			.error-code {
+				font-size: 80px;
+			}
+
+			.error-message {
+				font-size: 24px;
+			}
+
+			.options-container {
+				width: 100%;
+			}
+		}
+	</style>
 </head>
+
 <body>
-<div class="error-container">
-<h1>404 Not Found</h1>
-<p>The page you are looking for does not exist.</p>
-<p>Please try again or contact the administrator.</p>
-<a href="/">Go back to home page</a>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const errorContainer = document.querySelector(".error-container");
-errorContainer.addEventListener("click", function () {
-window.location.href = "/"; // redirect to homepage
-});
-});
-</script>
+	<div class="error-container">
+		<svg class="error-illustration" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M217.5,177.3c0,0,-16.6,-102.1,72.5,-115.8s153.8,31.5,214.5,36s47.5,39.5,5,73.8s-105.8,21.5,-118.8,64.3s36.2,85,-43.2,122s-200.5,-9.5,-198.5,-69s40.3,-89.5,68.5,-111.2Z"
+				fill="#f0f4ff" />
+			<path
+				d="M145.2,305.1c-20.8,-5.5,-35.9,-20.9,-35.8,-44.1c0.1,-23.7,20.7,-48.3,43.1,-54c22.1,-5.6,48.5,5.8,62.4,27.2c5,7.7,7.1,18.8,12.7,26c5.5,7.2,15.5,10,24.5,12.5c44.4,12.2,92.6,7.5,132,-13.4c5.6,-3,11.4,-6.7,13.6,-12.8c3.1,-8.9,-3.1,-18.3,-9.4,-25.1c-27.4,-29.3,-74.1,-33.6,-104.4,-60.7c-20.8,-18.5,-29.8,-48.1,-25.1,-76c4.6,-26.8,23.6,-52.2,49.7,-61.5c69.5,-24.9,142.8,48.3,175.2,-6.5c6.2,-10.5,6.9,-24,0.6,-34.4"
+				stroke="#0d6efd" stroke-width="4" stroke-linecap="round" fill="none" />
+			<ellipse cx="175" cy="232.5" rx="30" ry="32.5" fill="#0d6efd" />
+			<ellipse cx="175" cy="232.5" rx="15" ry="16.25" fill="white" />
+			<ellipse cx="330" cy="232.5" rx="30" ry="32.5" fill="#0d6efd" />
+			<ellipse cx="330" cy="232.5" rx="15" ry="16.25" fill="white" />
+			<path d="M215,282.5c15,20,55,20,70,0" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"
+				fill="none" />
+		</svg>
+
+		<h1 class="error-code">404</h1>
+		<h2 class="error-message">Page Not Found</h2>
+		<p class="error-description">Oops! The page you're looking for doesn't exist or has been moved. Let us help you
+			find what you need.</p>
+
+		<div class="options-container">
+			<form class="search-form" action="/search" method="get">
+				<input type="text" class="search-input" name="q" placeholder="Search our site..." aria-label="Search">
+				<button type="submit" class="search-button">Search</button>
+			</form>
+
+			<a href="/" class="button-primary">Back to Home</a>
+		</div>
+
+		<div class="separator"></div>
+
+		<h3>Popular Pages</h3>
+		<div class="popular-links">
+			<a href="/index.html">Home</a>
+		</div>
+
+		<p class="help-text">If you believe this is an error, please <a href="/contact">contact our support team</a>.
+		</p>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+        // Log 404 error to analytics (replace with your analytics code)
+        const pageUrl = window.location.href;
+        console.log("404 error logged for:", pageUrl);
+        
+        // Track where the user came from
+        const referrer = document.referrer;
+        if (referrer) {
+            console.log("User came from:", referrer);
+        }
+        
+        // Suggest pages based on the URL they were trying to reach
+        const path = window.location.pathname;
+        const searchInput = document.querySelector('.search-input');
+        
+        if (path) {
+            // Extract words from the path to suggest as search terms
+            const pathTerms = path.split('/').filter(term => term.length > 3).join(' ');
+            if (pathTerms) {
+                searchInput.placeholder = `Search for "${pathTerms}"...`;
+                searchInput.value = pathTerms;
+            }
+        }
+    });
+	</script>
 </body>
+
 </html>
